@@ -14,7 +14,7 @@ body {
   padding: 0.5rem 1rem;
   box-sizing: border-box;
   font-family: Arial, Helvetica, "Ubuntu", sans-serif;
-  font-size: 100%;
+  font-size: 112.5%;
 }
 
 main {
@@ -28,11 +28,6 @@ main {
   grid-gap: 1rem;
 
   @media (max-width: 900px) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
-  }
-
-  @media (max-width: 600px) {
     display: block;
   }
 }
