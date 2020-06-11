@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{page.title}} by Patrick Hutchins</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        {{page.title}} by Patrick Hutchins
+      </h1>
+      <nav>
+        <a href="/">home</a> | <a href="mailto:">email</a> |
+        <a href="" target="_blank">Unsplash</a> |
+        <a href="" target="_blank">Twitter</a>
+      </nav>
+    </header>
+    <main>
+      <figure>
+        <a href="assets/img/{{page.image}}">
+          <img src="assets/img/{{page.image}}" alt="{{page.title}}" />
+        </a>
+        <figcaption>{{content}}</figcaption>
+      </figure>
+    </main>
+    <footer>
+      <p>
+        Patrick Hutchins &copy; 2020. A website by
+        <a href="https://chasedooley.com" target="_blank">Chase Dooley</a>.
+      </p>
+    </footer>
+  </body>
+</html>

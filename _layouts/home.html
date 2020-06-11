@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{page.title}}</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>{{page.title}}</h1>
+      <nav>
+        <a href="mailto:pwbhutchins7@gmail.com">email</a> |
+        <a href="https://unsplash.com/@firexion7" target="_blank">unsplash</a> |
+        <a href="https://www.instagram.com/pathutchins7/" target="_blank">
+          instagram
+        </a>
+      </nav>
+    </header>
+    <main id="gallery">
+      <!-- {% if post.orientation == "vertical" %} class="vertical" {% else%} class="horizontal" {%endif%} -->
+      {% for post in site.posts %}
+      <figure>
+        <a href="assets/img/{{post.image}}" target="_blank">
+          <img src="assets/img/{{post.image}}" alt="{{post.title}}"
+        /></a>
+        <figcaption>{{post.title}}</figcaption>
+      </figure>
+      {% endfor %}
+    </main>
+    <footer>
+      <p>
+        Patrick Hutchins &copy; 2020. A website by
+        <a href="https://chasedooley.com" target="_blank">Chase Dooley</a>.
+      </p>
+    </footer>
+  </body>
+</html>

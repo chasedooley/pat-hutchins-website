@@ -1,0 +1,84 @@
+---
+---
+
+:root {
+  --bg-color: #fff;
+  --text-color-default: #222;
+  --text-color-accent: #0074d9;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1900px;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, "Ubuntu", sans-serif;
+  font-size: 100%;
+}
+
+main {
+  margin: 20px 0;
+  width: 100%;
+}
+
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  @media (max-width: 600px) {
+    display: block;
+  }
+}
+
+figure {
+  margin: 0;
+  box-sizing: content-box;
+  @media (max-width: 600px) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+img {
+  width: 100%;
+  max-width: 1080px;
+  object-fit: cover;
+}
+
+img.horizontal {
+  grid-area: h;
+}
+
+img.verticle {
+  grid-area: v;
+}
+
+h1 {
+  max-width: 500px;
+  font-size: 112.5%;
+}
+
+nav a,
+p a {
+  color: var(--text-color-default);
+  text-decoration: none;
+  border-bottom: 1px solid var(--text-color-default);
+}
+
+nav a:hover,
+nav a:focus,
+p a:hover,
+p a:focus {
+  color: var(--text-color-accent);
+  border-color: var(--text-color-accent);
+}
+
+.hidden {
+  display: none;
+}
