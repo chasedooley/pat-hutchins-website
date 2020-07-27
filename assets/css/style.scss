@@ -1,6 +1,8 @@
 ---
 ---
 
+@import "fonts";
+
 :root {
   --bg-color: #fff;
   --text-color-default: #222;
@@ -9,12 +11,12 @@
 
 body {
   margin: 0 auto;
-  max-width: 1900px;
+  max-width: 1200px;
   width: 100%;
   padding: 0.5rem 1rem;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, "Ubuntu", sans-serif;
-  font-size: 112.5%;
+  font-family: "Muli";
+  font-size: 160%;
 }
 
 main {
@@ -22,28 +24,17 @@ main {
   width: 100%;
 }
 
-#gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
-
-  @media (max-width: 900px) {
-    display: block;
-  }
-}
-
 figure {
-  margin: 0;
-  box-sizing: content-box;
-  @media (max-width: 600px) {
-    margin-bottom: 1.5rem;
-  }
+  margin: 10% 0;
 }
 
 img {
-  width: 100%;
-  max-width: 1080px;
-  object-fit: cover;
+  height: 80vh;
+
+  @media (max-width: 1000px) {
+    height: auto;
+    width: 100%;
+  }
 }
 
 img.horizontal {
@@ -52,11 +43,6 @@ img.horizontal {
 
 img.verticle {
   grid-area: v;
-}
-
-h1 {
-  max-width: 500px;
-  font-size: 112.5%;
 }
 
 nav a,

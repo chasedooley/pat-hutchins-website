@@ -18,36 +18,16 @@
       </nav>
     </header>
     <main id="gallery">
-      <div>
-        {% for post in site.categories.one %}
+      {% for post in site.posts %}
+      <section>
         <figure>
           <a href="assets/img/{{post.image}}" target="_blank">
             <img src="assets/img/{{post.image}}" alt="{{post.title}}"
           /></a>
           <figcaption>{{post.title}}</figcaption>
         </figure>
-        {% endfor %}
-      </div>
-      <div>
-        {% for post in site.categories.two %}
-        <figure>
-          <a href="assets/img/{{post.image}}" target="_blank">
-            <img src="assets/img/{{post.image}}" alt="{{post.title}}"
-          /></a>
-          <figcaption>{{post.title}}</figcaption>
-        </figure>
-        {% endfor %}
-      </div>
-      <div>
-        {% for post in site.categories.three %}
-        <figure>
-          <a href="assets/img/{{post.image}}" target="_blank">
-            <img src="assets/img/{{post.image}}" alt="{{post.title}}"
-          /></a>
-          <figcaption>{{post.title}}</figcaption>
-        </figure>
-        {% endfor %}
-      </div>
+      </section>
+      {% endfor %}
     </main>
     <footer>
       <p>
